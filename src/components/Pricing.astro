@@ -91,7 +91,7 @@ const plans = [
 ---
 
 <section id="pricing" class="py-[6rem] bg-white fade-section">
-  <div class="max-w-[80rem] mx-auto px-[1rem] md:px-[1.5rem] lg:px-[2rem]">
+  <div class="max-w-[80rem] mx-auto px-[0.5rem] md:px-[1.5rem] lg:px-[2rem]">
     
     <!-- Header -->
     <div class="text-center mb-[3rem]">
@@ -143,10 +143,10 @@ const plans = [
             </p>
           )}
           
-          <!-- Features com ver mais -->
-          <ul class="features-list space-y-[0.375rem] mb-[1rem] flex-grow" data-collapsed="true">
+          <!-- Features (Todas visíveis) -->
+          <ul class="features-list space-y-[0.375rem] mb-[1rem] flex-grow">
             {plan.features.map((feature, fIndex) => (
-              <li class={`feature-item flex items-start gap-[0.5rem] text-[0.75rem] ${plan.highlight ? 'text-white/80' : 'text-[#525252]'} ${fIndex >= 5 ? 'hidden' : ''}`} data-index={fIndex}>
+              <li class={`feature-item flex items-start gap-[0.5rem] text-[0.75rem] ${plan.highlight ? 'text-white/80' : 'text-[#525252]'}`}>
                 <svg class="w-[0.875rem] h-[0.875rem] flex-shrink-0 text-[#6D28D9] mt-[0.0625rem]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                 </svg>
@@ -154,19 +154,6 @@ const plans = [
               </li>
             ))}
           </ul>
-          
-          {/* Ver mais/menos */}
-          {plan.features.length > 5 && (
-            <button 
-              class={`toggle-features text-[0.75rem] font-medium mb-[1rem] flex items-center gap-[0.25rem] cursor-pointer ${plan.highlight ? 'text-[#6D28D9]' : 'text-[#6D28D9]'} hover:underline`}
-              data-plan={index}
-            >
-              <span class="toggle-text">Ver mais ({plan.features.length - 5})</span>
-              <svg class="toggle-icon w-[0.75rem] h-[0.75rem] transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-              </svg>
-            </button>
-          )}
           
           <button class={`w-full py-[0.75rem] rounded-[0.5rem] font-medium text-[0.875rem] transition-all duration-200 cursor-pointer mt-auto ${
             plan.highlight 
