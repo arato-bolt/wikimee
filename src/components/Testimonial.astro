@@ -43,7 +43,7 @@ const testimonials = [
     <!-- Grid de testimonials -->
     <div class="grid md:grid-cols-3 gap-[1.5rem]">
       {testimonials.map((testimonial) => (
-        <div class="relative group bg-white rounded-[1.5rem] p-[2.5rem] border border-[#E5E5E5] hover:border-[#6D28D9]/40 transition-all duration-300 hover:shadow-[0_10px_40px_-10px_rgba(109,40,217,0.1)]">
+          <div class="relative group bg-white rounded-[1.5rem] p-[2.5rem] border border-[#E5E5E5] hover:border-[#D4D4D4] transition-all duration-300 hover:shadow-lg h-full flex flex-col">
           
           <!-- Stars -->
           <div class="flex gap-[0.25rem] mb-[1.5rem] text-[#F59E0B]">
@@ -55,7 +55,7 @@ const testimonials = [
           <!-- Métrica em destaque -->
           <div class="mb-[1.5rem] flex items-baseline gap-[0.5rem]">
             <span class="text-[2.5rem] font-bold text-[#0A0A0A] tracking-tight">{testimonial.metric}</span>
-            <span class="text-[0.875rem] font-medium text-[#6D28D9] bg-[#6D28D9]/5 px-[0.75rem] py-[0.25rem] rounded-full border border-[#6D28D9]/10">
+            <span class="text-[0.75rem] font-semibold text-[#525252] bg-[#F5F5F5] px-[0.75rem] py-[0.25rem] rounded-full border border-[#E5E5E5] uppercase tracking-wide">
               {testimonial.metricLabel}
             </span>
           </div>
@@ -66,7 +66,7 @@ const testimonials = [
           </p>
           
           <!-- Autor -->
-          <div class="flex items-center gap-[1rem] pt-[2rem] border-t border-[#F5F5F5]">
+          <div class="mt-auto flex items-center gap-[1rem] pt-[2rem] border-t border-[#F5F5F5]">
             <img 
               src={testimonial.image} 
               alt={testimonial.name}
@@ -75,12 +75,6 @@ const testimonials = [
             <div>
               <p class="text-[1rem] font-bold text-[#0A0A0A]">{testimonial.name}</p>
               <p class="text-[0.875rem] text-[#737373]">{testimonial.role}</p>
-            </div>
-            
-            <!-- Logo da empresa (opcional, placeholder visual) -->
-            <div class="ml-auto opacity-20 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300">
-               <!-- Simulação de logo genérico para compor o card -->
-               <div class="h-[1.5rem] w-[1.5rem] bg-current rounded-full"></div>
             </div>
           </div>
           

@@ -10,44 +10,53 @@
 
   <div class="max-w-[75rem] mx-auto px-[1rem] md:px-[1.5rem] lg:px-[3rem] relative z-10">
     
-    <div class="bg-[#171717] rounded-[2rem] border border-[#262626] p-[2rem] md:p-[4rem] flex flex-col-reverse lg:flex-row items-center gap-[4rem]">
+    <div class="bg-[#171717] rounded-[2rem] border border-[#262626] p-[2rem] md:p-[4rem] flex flex-col items-center text-center gap-[3rem] lg:gap-[1rem]">
       
-      <!-- Image (Diagram) - Left Side -->
-      <div class="flex-1 w-full flex justify-center lg:justify-start">
-        <div class="relative w-full max-w-[500px]">
-          <!-- Glow effect -->
-          <div class="absolute inset-0 bg-[#6D28D9]/20 blur-[60px] rounded-full"></div>
-          
+      <!-- Layout Desktop: Diagrama - Texto - Cloud -->
+      <div class="flex flex-col lg:flex-row items-center justify-between w-full h-full gap-8">
+        
+        <!-- Esquerda: Diagrama (Hub/Estrutura) -->
+        <div class="flex-1 w-full max-w-[320px] lg:max-w-none flex justify-center lg:justify-start order-2 lg:order-1">
           <img 
             src="/integrations-diagram.svg" 
-            alt="Conexões Wikimee com Gmail, Slack, Drive, etc." 
-            class="relative w-full h-auto drop-shadow-2xl animate-float"
+            alt="Hub de Conexões" 
+            class="w-full h-auto drop-shadow-2xl opacity-90 hover:opacity-100 transition-opacity duration-500"
           />
         </div>
-      </div>
 
-      <!-- Content - Right Side -->
-      <div class="flex-1 max-w-[32rem]">
-        <h2 class="text-[2.5rem] md:text-[3rem] font-semibold text-white leading-tight mb-[1.5rem]">
-          <span class="text-[#6D28D9]">Wikimee</span> se conecta <br />
-          ao seu app preferido
-        </h2>
-        
-        <p class="text-[1rem] text-[#A3A3A3] leading-relaxed mb-[1.5rem]">
-          Com Wikimee, você monta rotinas de trabalho ou fluxos operacionais para qualquer tipo de operação criativa.
-        </p>
-        
-        <p class="text-[1rem] text-[#A3A3A3] leading-relaxed mb-[2.5rem]">
-          Além da integração nativa com soluções líderes de mercado, a Plataforma Wikimee é compatível com os principais gateways de Integração, permitindo a fácil conexão com centenas de outros apps.
-        </p>
-        
-        <a 
-          href="#pricing" 
-          class="inline-flex items-center gap-[0.5rem] bg-[#6D28D9] hover:bg-[#5B21B6] text-white font-medium px-[2rem] py-[1rem] rounded-[0.5rem] transition-all duration-300"
-        >
-          Teste grátis
-          <svg class="w-[1.25rem] h-[1.25rem]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-        </a>
+        <!-- Centro: Texto -->
+        <div class="flex-1 w-full max-w-[30rem] flex flex-col items-center order-1 lg:order-2 z-10">
+          <h2 class="text-[2rem] md:text-[2.5rem] font-semibold text-white leading-tight mb-[1rem]">
+            Substitua ou <br />
+            <span class="text-[#A78BFA]">Integre tudo</span>
+          </h2>
+          
+          <p class="text-[0.9375rem] text-[#A3A3A3] leading-relaxed mb-[2rem]">
+            A escolha é sua: use o Wikimee como sistema operacional completo ou conecte-o às ferramentas que seu time já ama.
+          </p>
+          
+          <a 
+            href="#pricing" 
+            class="inline-flex items-center gap-[0.5rem] bg-[#6D28D9] hover:bg-[#5B21B6] text-white font-medium px-[1.75rem] py-[0.75rem] rounded-[0.5rem] transition-all duration-300 shadow-lg shadow-purple-900/20"
+          >
+            Ver planos
+            <svg class="w-[1.125rem] h-[1.125rem]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+        </div>
+
+        <!-- Direita: Cloud (Volume/Apps) -->
+        <div class="flex-1 w-full max-w-[320px] lg:max-w-none flex justify-center lg:justify-end order-3">
+          <div class="relative w-full">
+            <!-- Gradient removido para não ofuscar -->
+            <img 
+              src="/integrations-cloud.png" 
+              alt="Centenas de Apps" 
+              class="w-full h-auto drop-shadow-2xl animate-float"
+              style="animation-delay: 1s;"
+            />
+          </div>
+        </div>
+
       </div>
       
     </div>
