@@ -1,0 +1,75 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import LogosBar from '../components/LogosBar.astro';
+import Problem from '../components/Problem.astro';
+import Features from '../components/Features.astro';
+import DetailedFeatures from '../components/DetailedFeatures.astro';
+import Testimonial from '../components/Testimonial.astro';
+import Segments from '../components/Segments.astro';
+import Integrations from '../components/Integrations.astro';
+import Pricing from '../components/Pricing.astro';
+import FAQ from '../components/FAQ.astro';
+import CTAFinal from '../components/CTAFinal.astro';
+import Footer from '../components/Footer.astro';
+// NO DemoModal for variant B - direct signup
+import PainPoints from '../components/PainPoints.astro';
+import Gains from '../components/Gains.astro';
+import CreativeFlow from '../components/CreativeFlow.astro';
+import Comparative from '../components/Comparative.astro';
+
+// A/B Test Variant B Config
+const signupUrl = 'https://wikimee.app/signup';
+---
+
+<Layout title="Wikimee - Gerencie sua agência de um só lugar">
+  <Hero />
+  <LogosBar />
+  <PainPoints />
+  <Problem />
+  <Gains />
+  <DetailedFeatures />
+  <Features />
+  <CreativeFlow />
+  <Comparative />
+  <Segments />
+  <Integrations />
+  <Testimonial />
+  <Pricing />
+  <FAQ />
+  <CTAFinal />
+  <Footer />
+  <!-- NO DemoModal - variant B uses direct signup -->
+</Layout>
+
+<script define:vars={{ signupUrl }}>
+  // Variant B: Replace all "Agendar Demo" buttons with direct signup links
+  document.addEventListener('DOMContentLoaded', () => {
+    // Find all buttons that open modal
+    const ctaButtons = document.querySelectorAll('button[onclick="openModal()"], button[onclick*="openModal"]');
+    
+    ctaButtons.forEach(button => {
+      // Change text
+      if (button.textContent.includes('Agendar Demo')) {
+        button.textContent = 'Teste grátis';
+      }
+      
+      // Remove onclick and add direct link
+      button.removeAttribute('onclick');
+      button.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.location.href = signupUrl;
+      });
+    });
+    
+    // Also handle anchor tags with #
+    const ctaLinks = document.querySelectorAll('a[href="#"][onclick*="openModal"]');
+    ctaLinks.forEach(link => {
+      if (link.textContent.includes('Agendar Demo')) {
+        link.textContent = 'Teste grátis';
+      }
+      link.href = signupUrl;
+      link.removeAttribute('onclick');
+    });
+  });
+</script>

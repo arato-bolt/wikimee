@@ -5,34 +5,46 @@ const features = [
   {
     id: 'portal',
     title: 'Portal do Cliente',
-    description: 'Seus clientes acessam um portal white-label com sua marca. Visualizam briefings, aprovam materiais e acompanham o progresso dos projetos.',
-    items: ['Login personalizado', 'Sua marca e cores', 'Aprovações em um clique'],
-    image: '/screenshot-1.webp', // Portal Orange - exemplo de white-label
-    reverse: false
+    description: 'Seu cliente aprova demandas em um ambiente exclusivo com a sua marca.',
+    iconPath: 'M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4'
   },
   {
-    id: 'projetos',
-    title: 'Gestão de Projetos',
-    description: 'Kanban flexível, cronogramas integrados. Organize tarefas por cliente, campanha ou equipe. Veja tudo em um só lugar.',
-    items: ['Kanban flexível', 'Cronogramas visuais', 'Filtros por cliente'],
-    image: '/screenshot-4.webp', // Dashboard Crealia com projetos
-    reverse: true
+    id: 'whitelabel',
+    title: 'White-label',
+    description: 'Personalize tudo: domínio, cores, logos e e-mails. O Wikimee fica invisível.',
+    iconPath: 'M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01'
   },
   {
-    id: 'drive',
-    title: 'Drive Centralizado',
-    description: 'Chega de arquivos espalhados. Organize por cliente, projeto ou campanha. Busca avançada e compartilhamento seguro.',
-    items: ['Organização por cliente', 'Compartilhamento seguro', 'Busca avançada'],
-    image: '/screenshot-5.webp', // Wikimee Drive
-    reverse: false
+    id: 'workspaces',
+    title: 'Workspaces',
+    description: 'Ambientes digitais flexíveis para organizar times, squads ou clientes separadamente.',
+    iconPath: 'M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10'
+  },
+  {
+    id: 'comunicador',
+    title: 'Comunicador',
+    description: 'Chat integrado direto na refação. Centralize conversas e elimine o ruído do WhatsApp.',
+    iconPath: 'M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z'
+  },
+  {
+    id: 'versionamento',
+    title: 'Versionamento',
+    description: 'Controle de versão automático. Nunca mais perca o "Final_V2_AgoraVai.psd".',
+    iconPath: 'M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z'
+  },
+  {
+    id: 'kanban',
+    title: 'Kanban',
+    description: 'Fluxos de trabalho visuais. Arraste e solte tarefas para mover demandas.',
+    iconPath: 'M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2'
   }
 ];
 ---
 
-<section id="features" class="py-[6rem] bg-[#F9FAFB]">
+<section class="py-[6rem] bg-white relative z-20" id="features">
   <div class="max-w-[75rem] mx-auto px-[1rem] md:px-[1.5rem] lg:px-[3rem]">
     
-    <!-- Header CENTRALIZADO com mais peso -->
+    <!-- Header -->
     <div class="text-center max-w-[50rem] mx-auto mb-[4rem] fade-section">
       <p class="text-[0.875rem] font-medium text-[#6D28D9] mb-[0.75rem]">Funcionalidades</p>
       <h2 class="text-[2.25rem] sm:text-[3rem] font-bold text-[#0A0A0A] mb-[1rem] leading-tight">
@@ -43,55 +55,22 @@ const features = [
       </p>
     </div>
     
-    <!-- Features alternadas -->
-    <div class="space-y-[6rem]">
+    <!-- 6-Grid White Cards with Outline Icons -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-[1.5rem]">
       {features.map((feature) => (
-        <div class={`fade-section flex flex-col ${feature.reverse ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-center gap-[3rem] lg:gap-[4rem]`}>
+        <div class="bg-white rounded-[1.5rem] p-[2rem] shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col items-start text-left h-full group">
           
-          <!-- Texto -->
-          <div class="flex-1">
-            <div class="mb-[1rem]">
-              {feature.id === 'portal' && (
-                <div class="w-[3rem] h-[3rem] bg-white border border-[#E5E5E5] shadow-sm rounded-[0.5rem] flex items-center justify-center text-[#525252]">
-                  <svg class="w-[1.5rem] h-[1.5rem]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
-                </div>
-              )}
-              {feature.id === 'projetos' && (
-                <div class="w-[3rem] h-[3rem] bg-white border border-[#E5E5E5] shadow-sm rounded-[0.5rem] flex items-center justify-center text-[#525252]">
-                   <svg class="w-[1.5rem] h-[1.5rem]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/></svg>
-                </div>
-              )}
-              {feature.id === 'drive' && (
-                <div class="w-[3rem] h-[3rem] bg-white border border-[#E5E5E5] shadow-sm rounded-[0.5rem] flex items-center justify-center text-[#525252]">
-                  <svg class="w-[1.5rem] h-[1.5rem]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"/></svg>
-                </div>
-              )}
-            </div>
-            <h3 class="text-[1.5rem] lg:text-[2rem] font-semibold text-[#0A0A0A] mb-[1rem]">{feature.title}</h3>
-            <p class="text-[1rem] text-[#737373] mb-[1.5rem] leading-relaxed">{feature.description}</p>
-            
-            <ul class="space-y-[0.75rem]">
-              {feature.items.map((item) => (
-                <li class="flex items-center gap-[0.75rem] text-[#0A0A0A]">
-                  <svg class="w-[1.25rem] h-[1.25rem] text-[#6D28D9] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                  </svg>
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-          
-          <div class="flex-1 w-full group">
-            <div class="rounded-[0.75rem] overflow-hidden shadow-xl border border-[#E5E5E5] transition-all duration-300 group-hover:border-[#6D28D9]/50 group-hover:shadow-2xl group-hover:shadow-[#6D28D9]/10 transform group-hover:-translate-y-1">
-              <img 
-                src={feature.image} 
-                alt={feature.title}
-                class="w-full h-auto"
-                loading="lazy"
-              />
+          <!-- Simple Outline Icon Container -->
+          <div class="mb-[1.5rem]">
+            <div class="w-[3rem] h-[3rem] bg-gray-50 border border-[#E5E5E5] rounded-[0.75rem] flex items-center justify-center text-[#525252] group-hover:text-[#6D28D9] group-hover:border-[#6D28D9]/30 transition-colors">
+              <svg class="w-[1.5rem] h-[1.5rem]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d={feature.iconPath} />
+              </svg>
             </div>
           </div>
+
+          <h3 class="text-[1.25rem] font-bold text-[#0A0A0A] mb-[0.75rem]">{feature.title}</h3>
+          <p class="text-[1rem] text-[#737373] leading-relaxed mb-auto">{feature.description}</p>
           
         </div>
       ))}

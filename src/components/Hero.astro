@@ -1,63 +1,78 @@
 ---
 // Hero FINAL - Copy CRO focada em decisores de agências
-// Dor: diversas ferramentas / Solução: uma plataforma
+// Design: World Class SaaS (Mesh Gradients + Noise + Glassmorphism)
 // Badge com avatares estilo ManyRequests
 
 const pills = [
   'Portal do Cliente',
   'Projetos', 
-  'Cronogramas',
+  'Comunicador',
   'Aprovações',
   'Kanban',
-  'White-label'
+  'White-label',
+  'Campanhas'
 ];
 ---
 
-<section class="relative pt-[5rem] pb-[4rem] md:pt-[6rem] md:pb-[6rem] overflow-hidden bg-[#0A0A0A]">
-  <!-- Gradient Background -->
-  <div class="absolute inset-0 pointer-events-none">
-    <div class="absolute top-[-20%] left-1/2 -translate-x-1/2 w-[1000px] h-[1000px] bg-[#6D28D9]/20 blur-[100px] rounded-full mix-blend-screen"></div>
-    <div class="absolute top-0 inset-x-0 h-[200px] bg-gradient-to-b from-[#6D28D9]/10 to-transparent"></div>
+<section class="relative pt-[5rem] pb-[4rem] md:pt-[6rem] md:pb-[6rem] overflow-hidden bg-[#0A0515]">
+  
+  <!-- World Class Background System -->
+  <div class="absolute inset-0 w-full h-full overflow-hidden pointer-events-none">
+    
+    <!-- 1. Noise Texture (Dithering/Film Grain) -->
+    <!-- Noise Removed -->
+
+    <!-- 2. Perspective Grid (Depth) -->
+    <div class="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] z-10 animate-pulse-slow"></div>
+
+    <!-- 3. Mesh Aurora Gradients (Organic Movement) -->
+    <div class="absolute top-0 left-0 w-full h-full z-0">
+        <!-- Primary Bloom (Purple) -->
+        <div class="absolute top-[-10%] left-[20%] w-[45vw] h-[45vw] bg-[#6D28D9] rounded-full mix-blend-screen filter blur-[100px] opacity-40 animate-aurora-1"></div>
+        <!-- Secondary Bloom (Blue) -->
+        <div class="absolute top-[10%] right-[10%] w-[40vw] h-[40vw] bg-[#2563EB] rounded-full mix-blend-screen filter blur-[100px] opacity-30 animate-aurora-2"></div>
+        <!-- Accent Bloom (Pink/Magenta) -->
+        <div class="absolute bottom-[0%] left-[30%] w-[50vw] h-[50vw] bg-[#DB2777] rounded-full mix-blend-screen filter blur-[120px] opacity-20 animate-aurora-3"></div>
+    </div>
+    
+    <!-- 4. Vignette Fade -->
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#0A0515]/40 to-[#0A0515] z-10"></div>
   </div>
   
-  <!-- Gradiente radial sutil -->
-  <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(139,92,246,0.12),transparent)]"></div>
-  
   <!-- Content -->
-  <div class="relative z-10 max-w-[90rem] mx-auto px-[1rem] md:px-[1.5rem] pt-[4rem] md:pt-[5rem] pb-[6rem]">
+  <div class="relative z-30 max-w-[90rem] mx-auto px-[1.5rem] md:px-[1.5rem] pt-[1rem] md:pt-[5rem] pb-[0rem] md:pb-[6rem]">
     
     <div class="text-center">
       
-      <!-- Badge com avatares (estilo ManyRequests) -->
-      <div class="inline-flex items-center gap-[0.75rem] mb-[2rem] px-[1rem] py-[0.5rem] bg-white/5 rounded-full border border-white/10 animate-fade-in">
+      <!-- Badge com avatares -->
+      <div class="inline-flex items-center gap-[0.5rem] mb-[1.5rem] px-[0.75rem] py-[0.375rem] bg-white/5 rounded-full border border-white/10 animate-fade-in backdrop-blur-md shadow-lg shadow-purple-900/10">
         <!-- Avatares sobrepostos -->
         <div class="flex -space-x-2">
-          <img src="/testimonial-bruno.png" alt="" class="w-[2rem] h-[2rem] rounded-full border-2 border-[#0f0d1a] object-cover"/>
-          <img src="/testimonial-pollyanna.png" alt="" class="w-[2rem] h-[2rem] rounded-full border-2 border-[#0f0d1a] object-cover"/>
-          <img src="/testimonial-danilo.png" alt="" class="w-[2rem] h-[2rem] rounded-full border-2 border-[#0f0d1a] object-cover"/>
+          <img src="/testimonial-bruno.png" alt="" class="w-[1.5rem] h-[1.5rem] rounded-full border-2 border-[#0f0d1a] object-cover"/>
+          <img src="/testimonial-pollyanna.png" alt="" class="w-[1.5rem] h-[1.5rem] rounded-full border-2 border-[#0f0d1a] object-cover"/>
+          <img src="/testimonial-danilo.png" alt="" class="w-[1.5rem] h-[1.5rem] rounded-full border-2 border-[#0f0d1a] object-cover"/>
         </div>
-        <span class="text-[0.875rem] text-white/80">
-          Usado por <span class="text-white font-medium">+500 donos de agências</span>
+        <span class="text-[0.8125rem] text-white/90 font-medium tracking-wide">
+          Usado por <span class="text-white">+5k de profissionais</span>
         </span>
       </div>
       
-      <!-- Headline CRO - Foco na dor -->
-      <!-- Headline CRO - Foco na dor -->
-      <h1 class="text-[2.5rem] md:text-[3.5rem] lg:text-[4.5rem] font-bold text-white leading-none mb-[1rem] animate-fade-in animation-delay-100 mx-auto max-w-full">
-        Chega de 5 ferramentas para <br class="hidden md:block"/>
-        <span class="bg-gradient-to-r from-violet-400 to-purple-300 bg-clip-text text-transparent inline">gerenciar sua agência</span>
+      <!-- Headline CRO -->
+      <h1 class="text-[2rem] sm:text-[2.5rem] md:text-[3.5rem] lg:text-[4.5rem] font-bold text-white leading-[1.2] md:leading-none mb-[0.75rem] animate-fade-in animation-delay-100 mx-auto max-w-[60rem] tracking-tight drop-shadow-sm">
+        Chega de 5 ferramentas <br class="md:hidden" />
+        para <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#A78BFA] via-[#C4B5FD] to-[#A78BFA] bg-[length:200%_auto] animate-gradient-text inline">gerenciar <br class="md:hidden" /> sua agência</span>
       </h1>
       
-      <!-- Subheadline CRO - Solução clara -->
-      <p class="text-[1.125rem] sm:text-[1.25rem] text-white/70 mb-[1.5rem] max-w-[36rem] mx-auto leading-relaxed animate-fade-in animation-delay-200">
-        Portal do cliente, projetos, aprovações, cronogramas e drive.
-        <span class="text-white block sm:inline">Tudo em uma única plataforma</span> feita para agências.
+      <!-- Subheadline CRO -->
+      <p class="text-[1rem] sm:text-[1.25rem] text-white/70 mb-[1.25rem] max-w-[34rem] mx-auto leading-relaxed animate-fade-in animation-delay-200" style="text-wrap: balance;">
+        Portal do cliente, projetos, aprovações, comunicador e drive.
+        Tudo em uma única plataforma feita para agências.
       </p>
       
-      <!-- Pills clicáveis -->
-      <div class="flex flex-wrap justify-center gap-[0.5rem] mb-[1.5rem] animate-fade-in animation-delay-300">
+      <!-- Pills -->
+      <div class="flex flex-nowrap md:flex-wrap justify-start md:justify-center gap-[0.5rem] mb-[1.5rem] animate-fade-in animation-delay-300 overflow-x-auto no-scrollbar -mx-[1.5rem] px-[1.5rem] md:mx-0 md:px-0 scroll-smooth snap-x">
         {pills.map((pill) => (
-          <span class="px-[0.875rem] py-[0.375rem] bg-white/5 border border-white/10 rounded-full text-[0.8125rem] text-white/70">
+          <span class="flex-shrink-0 snap-center px-[0.8125rem] py-[0.25rem] bg-white/5 border border-white/10 rounded-full text-[0.8125rem] text-white/80 whitespace-nowrap hover:bg-white/10 transition-colors backdrop-blur-sm">
             {pill}
           </span>
         ))}
@@ -67,69 +82,189 @@ const pills = [
       <div class="flex flex-col sm:flex-row justify-center items-center gap-[0.75rem] mb-[2rem] animate-fade-in animation-delay-400">
         <button 
           onclick="openModal()"
-          class="px-[2rem] py-[0.875rem] bg-[#6D28D9] hover:bg-[#5B21B6] text-white font-semibold rounded-full transition-all duration-200 cursor-pointer text-[1rem]"
+          class="px-[2rem] py-[0.875rem] bg-gradient-to-r from-[#7C3AED] to-[#DB2777] hover:brightness-110 text-white font-semibold rounded-full transition-all duration-300 cursor-pointer text-[1rem] shadow-[0_0_20px_rgba(124,58,237,0.4)] hover:shadow-[0_0_40px_rgba(124,58,237,0.6)] hover:-translate-y-1"
         >
-          Testar grátis
+          Agendar Demo
         </button>
-        <a href="#pricing" class="px-[1.5rem] py-[0.875rem] text-white/70 hover:text-white font-medium transition-colors text-[1rem] flex items-center gap-[0.375rem]">
-          Ver planos
-          <svg class="w-[1rem] h-[1rem]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-          </svg>
-        </a>
       </div>
     
     <!-- Mockup com VÍDEO -->
-    <div class="hero-mockup max-w-[70rem] mx-auto animate-fade-in animation-delay-500">
+    <div class="hero-mockup max-w-[70rem] mx-auto animate-fade-in animation-delay-500 relative z-20">
       
-      <div class="rounded-[1rem] overflow-hidden border border-white/10 bg-white shadow-2xl">
+      <!-- Glow behind mockup -->
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] h-[90%] bg-purple-500/10 blur-[80px] -z-10 rounded-full"></div>
+
+      <div class="rounded-[1rem] overflow-hidden border border-white/10 bg-[#0A0A0A] shadow-2xl ring-1 ring-white/5">
         
         <!-- Browser bar -->
-        <div class="flex items-center gap-[0.5rem] px-[1rem] py-[0.625rem] bg-[#F5F5F5] border-b border-[#E5E5E5]">
+        <div class="flex items-center gap-[0.5rem] px-[1rem] py-[0.625rem] bg-[#111] border-b border-white/10">
           <div class="flex gap-[0.5rem]">
-            <div class="w-[0.75rem] h-[0.75rem] rounded-full bg-[#ff5f57]"></div>
-            <div class="w-[0.75rem] h-[0.75rem] rounded-full bg-[#febc2e]"></div>
-            <div class="w-[0.75rem] h-[0.75rem] rounded-full bg-[#28c840]"></div>
+            <div class="w-[0.75rem] h-[0.75rem] rounded-full bg-[#333] border border-white/10"></div>
+            <div class="w-[0.75rem] h-[0.75rem] rounded-full bg-[#333] border border-white/10"></div>
+            <div class="w-[0.75rem] h-[0.75rem] rounded-full bg-[#333] border border-white/10"></div>
           </div>
           <div class="flex-1 mx-[2rem]">
-            <div class="max-w-[15rem] mx-auto px-[1rem] py-[0.375rem] bg-white rounded-[0.375rem] text-[0.8125rem] text-[#737373] text-center border border-[#E5E5E5]">
-              app.wikimee.com
+            <div class="max-w-[15rem] mx-auto px-[1rem] py-[0.25rem] bg-[#0A0A0A] rounded-[0.375rem] text-[0.75rem] text-[#555] text-center border border-white/5 font-mono">
+              wikimee.app
             </div>
           </div>
         </div>
         
-        <!-- Vídeo -->
-        <div style="padding:56.25% 0 0 0;position:relative; background: white;">
+        <!-- Vídeo Container -->
+        <div class="relative group" style="padding:56.25% 0 0 0; background: #000;">
           <iframe 
-            src="https://player.vimeo.com/video/919270719?badge=0&autopause=0&player_id=0&app_id=58479&background=1" 
-            frameborder="0" 
+            id="vimeo-hero"
+            src="https://player.vimeo.com/video/919270719?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1&playsinline=1&controls=0" 
+            frameborder="0"  
             allow="autoplay; fullscreen; picture-in-picture" 
             style="position:absolute;top:0;left:0;width:100%;height:100%;" 
             title="Wikimee Dashboard"
             loading="lazy"
           ></iframe>
         </div>
+
+          <!-- Botão Play/Pause Centralizado -->
+          <button id="hero-play-btn" class="absolute inset-0 w-full h-full flex items-center justify-center bg-black/0 hover:bg-black/10 transition-all duration-300 opacity-0 group-hover:opacity-100 z-10 cursor-pointer text-white">
+            <div class="w-[4rem] h-[4rem] bg-black/30 backdrop-blur-md rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-lg border border-white/20">
+              <svg id="icon-pause" class="w-[1.5rem] h-[1.5rem] block" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+              </svg>
+              <svg id="icon-play" class="w-[1.5rem] h-[1.5rem] hidden ml-1" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
+            </div>
+          </button>
+          
+          <!-- Botão Unmute Flutuante -->
+          <button 
+            id="unmute-btn"
+            class="absolute bottom-4 right-4 z-50 bg-black/80 hover:bg-black text-white px-4 py-2 rounded-full shadow-lg backdrop-blur-md transition-all duration-300 flex items-center gap-2 border border-white/10"
+            aria-label="Ativar som do vídeo"
+          >
+            <svg id="sound-off-icon" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" clip-rule="evenodd"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2"/>
+            </svg>
+            <svg id="sound-on-icon" class="w-4 h-4 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"/>
+            </svg>
+            <span id="unmute-text" class="text-xs font-bold tracking-wide uppercase">Ativar Som</span>
+          </button>
+        </div>
       </div>
       
     </div>
     
   </div>
-  
 
 </section>
 
-<!-- Animations CSS -->
+<!-- Scripts e Styles -->
+<script is:inline src="https://player.vimeo.com/api/player.js"></script>
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const iframe = document.getElementById('vimeo-hero');
+    const player = new Vimeo.Player(iframe);
+    const btn = document.getElementById('hero-play-btn');
+    const iconPlay = document.getElementById('icon-play');
+    const iconPause = document.getElementById('icon-pause');
+    
+    player.on('play', () => {
+      iconPlay.classList.add('hidden');
+      iconPause.classList.remove('hidden');
+      btn.classList.remove('is-paused');
+    });
+    
+    player.on('pause', () => {
+      iconPause.classList.add('hidden');
+      iconPlay.classList.remove('hidden');
+      btn.classList.add('is-paused');
+    });
+
+    btn.addEventListener('click', () => {
+      player.getPaused().then((paused) => {
+        if (paused) player.play();
+        else player.pause();
+      });
+    });
+
+    player.getPaused().then((paused) => {
+      if (paused) {
+        iconPause.classList.add('hidden');
+        iconPlay.classList.remove('hidden');
+        btn.classList.add('is-paused');
+      }
+    });
+
+    // Unmute Logic
+    const unmuteBtn = document.getElementById('unmute-btn');
+    const soundOffIcon = document.getElementById('sound-off-icon');
+    const soundOnIcon = document.getElementById('sound-on-icon');
+    const unmuteText = document.getElementById('unmute-text');
+    let isMuted = true;
+    
+    unmuteBtn.addEventListener('click', async () => {
+      try {
+        if (isMuted) {
+          await player.setMuted(false);
+          soundOffIcon.classList.add('hidden');
+          soundOnIcon.classList.remove('hidden');
+          unmuteText.textContent = 'Desativar Som';
+          isMuted = false;
+        } else {
+          await player.setMuted(true);
+          soundOffIcon.classList.remove('hidden');
+          soundOnIcon.classList.add('hidden');
+          unmuteText.textContent = 'Ativar Som';
+          isMuted = true;
+        }
+      } catch (error) {
+        console.error('Erro áudio:', error);
+      }
+    });
+  });
+</script>
+
 <style>
+  .is-paused {
+    opacity: 1 !important;
+    background-color: rgba(0,0,0,0.5) !important;
+  }
+
+  /* Aurora / Mesh Animations */
+  @keyframes aurora-1 {
+    0% { transform: translate(0, 0) scale(1); opacity: 0.4; }
+    50% { transform: translate(10%, -10%) scale(1.1); opacity: 0.5; }
+    100% { transform: translate(0, 0) scale(1); opacity: 0.4; }
+  }
+  @keyframes aurora-2 {
+    0% { transform: translate(0, 0) scale(1); opacity: 0.3; }
+    50% { transform: translate(-10%, 10%) scale(1.1); opacity: 0.4; }
+    100% { transform: translate(0, 0) scale(1); opacity: 0.3; }
+  }
+  @keyframes aurora-3 {
+    0% { transform: translate(0, 0) scale(1); opacity: 0.2; }
+    50% { transform: translate(10%, 10%) scale(1.2); opacity: 0.3; }
+    100% { transform: translate(0, 0) scale(1); opacity: 0.2; }
+  }
+
+  .animate-aurora-1 { animation: aurora-1 12s infinite alternate ease-in-out; }
+  .animate-aurora-2 { animation: aurora-2 15s infinite alternate ease-in-out; }
+  .animate-aurora-3 { animation: aurora-3 10s infinite alternate ease-in-out; }
+  
+  @keyframes pulse-slow {
+    0%, 100% { opacity: 0.05; }
+    50% { opacity: 0.1; }
+  }
+  .animate-pulse-slow {
+    animation: pulse-slow 6s ease-in-out infinite;
+  }
+
   @keyframes fadeIn {
     from { opacity: 0; transform: translateY(1rem); }
     to { opacity: 1; transform: translateY(0); }
   }
-  
-  .animate-fade-in {
-    animation: fadeIn 0.6s ease-out forwards;
-    opacity: 0;
-  }
-  
+  .animate-fade-in { animation: fadeIn 0.8s ease-out forwards; opacity: 0; }
   .animation-delay-100 { animation-delay: 0.1s; }
   .animation-delay-200 { animation-delay: 0.2s; }
   .animation-delay-300 { animation-delay: 0.3s; }

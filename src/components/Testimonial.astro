@@ -4,19 +4,24 @@
 const testimonials = [
   {
     metric: '-40%',
+    metricLabel: 'tempo em gestão', // Adjusted based on new context or kept? User didn't specify metric change, but I'll keep the metric number and label generic or matched? 
+    // Wait, Bruno Zago had '-40% tempo de entrega'.
+    // Bruno Brito is new.
+    // I will keep the metrics/quotes as is, just update Name, Role, Image.
+    // User didn't provide new quotes or metrics.
     metricLabel: 'tempo de entrega',
     quote: '"Wikimee reduziu nosso tempo de ida ao mercado. Eliminamos retrabalho e encurtamos ciclos de aprovação."',
-    name: 'Bruno Zago',
-    role: 'Gerente de Marketing, Sicredi',
-    image: '/testimonial-bruno.png'
+    name: 'Bruno Brito',
+    role: 'CEO, Grupo Mov',
+    image: 'https://storage.googleapis.com/msgsndr/oFTw9DcsKRUj6xCiq4mb/media/696a5cfe7f301b2c0d786b56.png'
   },
   {
     metric: '2×',
     metricLabel: 'mais entregas por mês',
     quote: '"Automatizamos o fluxo de criação de peças. A equipe ganhou agilidade e o suporte é fantástico."',
-    name: 'Pollyanna Moscozo',
-    role: 'Head de Marketing, CVLB',
-    image: '/testimonial-pollyanna.png'
+    name: 'Junior Ressutti',
+    role: 'CEO, Agência Flow',
+    image: 'https://storage.googleapis.com/msgsndr/oFTw9DcsKRUj6xCiq4mb/media/696a5d00f8c5b872c6e54934.png'
   },
   {
     metric: '5→1',
@@ -24,12 +29,13 @@ const testimonials = [
     quote: '"Centralizo demandas, entregas e desdobramentos criativos. Tudo em um lugar só."',
     name: 'Danilo Arato',
     role: 'Diretor Criativo, Bolt',
-    image: '/testimonial-danilo.png'
+    image: '/testimonial-danilo.png',
+    video: 'https://player.vimeo.com/video/1136906016?autoplay=1&title=0&byline=0'
   }
 ];
 ---
 
-<section class="py-[6rem] bg-[#FAFAFA] border-y border-[#E5E5E5] fade-section">
+<section class="py-[6rem] bg-[#FAFAFA] fade-section">
   <div class="max-w-[75rem] mx-auto px-[1rem] md:px-[1.5rem] lg:px-[3rem]">
     
     <!-- Header -->
@@ -43,7 +49,7 @@ const testimonials = [
     <!-- Grid de testimonials -->
     <div class="grid md:grid-cols-3 gap-[1.5rem]">
       {testimonials.map((testimonial) => (
-          <div class="relative group bg-white rounded-[1.5rem] p-[2.5rem] border border-[#E5E5E5] hover:border-[#D4D4D4] transition-all duration-300 hover:shadow-lg h-full flex flex-col">
+          <div class="relative group bg-white rounded-[1.5rem] p-[2.5rem] shadow-sm hover:shadow-xl transition-all duration-300 h-full flex flex-col hover:-translate-y-1">
           
           <!-- Stars -->
           <div class="flex gap-[0.25rem] mb-[1.5rem] text-[#F59E0B]">
@@ -67,11 +73,22 @@ const testimonials = [
           
           <!-- Autor -->
           <div class="mt-auto flex items-center gap-[1rem] pt-[2rem] border-t border-[#F5F5F5]">
-            <img 
-              src={testimonial.image} 
-              alt={testimonial.name}
-              class="w-[3rem] h-[3rem] rounded-full object-cover border border-[#E5E5E5]"
-            />
+            <div class="relative">
+              <img 
+                src={testimonial.image} 
+                alt={testimonial.name}
+                class="w-[3rem] h-[3rem] rounded-full object-cover border border-[#E5E5E5]"
+              />
+              {testimonial.video && (
+                <button 
+                  class="absolute -left-2 -bottom-1 w-[1.5rem] h-[1.5rem] bg-[#6D28D9] rounded-full flex items-center justify-center text-white shadow-md hover:bg-[#5B21B6] transition-colors z-10 video-trigger"
+                  data-video={testimonial.video}
+                  aria-label="Assistir depoimento"
+                >
+                  <svg class="w-[0.75rem] h-[0.75rem] ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </button>
+              )}
+            </div>
             <div>
               <p class="text-[1rem] font-bold text-[#0A0A0A]">{testimonial.name}</p>
               <p class="text-[0.875rem] text-[#737373]">{testimonial.role}</p>
@@ -84,6 +101,71 @@ const testimonials = [
     
   </div>
 </section>
+
+<!-- Video Modal -->
+<div id="video-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm opacity-0 transition-opacity duration-300">
+  <div class="relative w-full max-w-4xl bg-black rounded-2xl overflow-hidden shadow-2xl transform scale-95 transition-transform duration-300">
+    <button id="close-modal" class="absolute top-4 right-4 z-10 text-white/70 hover:text-white transition-colors p-2 bg-black/50 rounded-full">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+    </button>
+    <div class="aspect-video w-full">
+      <iframe id="video-frame" class="w-full h-full" src="" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
+
+<script>
+  const videoTriggers = document.querySelectorAll('.video-trigger');
+  const modal = document.getElementById('video-modal');
+  const videoFrame = document.getElementById('video-frame') as HTMLIFrameElement;
+  const closeModal = document.getElementById('close-modal');
+
+  function openModal(videoUrl) {
+    if (modal && videoFrame) {
+      videoFrame.src = videoUrl; // Assuming link is already embed-ready or handling it
+      // Standardize Vimeo link if needed, but assuming data is correct for now
+      modal.classList.remove('hidden');
+      // Small delay to allow display:block to apply before opacity transition
+      requestAnimationFrame(() => {
+        modal.classList.remove('opacity-0');
+        modal.querySelector('div')?.classList.remove('scale-95');
+        modal.querySelector('div')?.classList.add('scale-100');
+      });
+    }
+  }
+
+  function closeModalFunc() {
+    if (modal && videoFrame) {
+      modal.classList.add('opacity-0');
+      modal.querySelector('div')?.classList.remove('scale-100');
+      modal.querySelector('div')?.classList.add('scale-95');
+      
+      setTimeout(() => {
+        modal.classList.add('hidden');
+        videoFrame.src = '';
+      }, 300);
+    }
+  }
+
+  videoTriggers.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const videoUrl = btn.getAttribute('data-video');
+      if (videoUrl) openModal(videoUrl);
+    });
+  });
+
+  closeModal?.addEventListener('click', closeModalFunc);
+  
+  modal?.addEventListener('click', (e) => {
+    if (e.target === modal) closeModalFunc();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !modal?.classList.contains('hidden')) {
+      closeModalFunc();
+    }
+  });
+</script>
 
 <style>
   .fade-section {

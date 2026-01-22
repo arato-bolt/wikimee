@@ -1,14 +1,16 @@
 ---
 // Logos Bar - MAIOR e mais visível
 const clients = [
-  { name: 'Score Group', logo: '/logo-client-1.png' },
-  { name: 'Condor', logo: '/logo-client-2.png' },
-  { name: 'Fecomércio', logo: '/logo-client-3.png' },
-  { name: 'Grupo Boticário', logo: '/logo-client-4.png' }
+  { name: 'Client 1', logo: 'https://storage.googleapis.com/msgsndr/oFTw9DcsKRUj6xCiq4mb/media/696a5ba8eb2da7618bb33851.png' },
+  { name: 'Client 2', logo: 'https://storage.googleapis.com/msgsndr/oFTw9DcsKRUj6xCiq4mb/media/696a5ba67b4d1e524f40f4ce.png' },
+  { name: 'Client 3', logo: 'https://storage.googleapis.com/msgsndr/oFTw9DcsKRUj6xCiq4mb/media/696a5ba3eb2da72447b337be.png', invert: true },
+  { name: 'Client 4', logo: 'https://storage.googleapis.com/msgsndr/oFTw9DcsKRUj6xCiq4mb/media/696a5be7b34b6443f80c8b84.png' },
+  { name: 'Client 5', logo: 'https://storage.googleapis.com/msgsndr/oFTw9DcsKRUj6xCiq4mb/media/696a5b8bc7546a6e1e43a2a5.png' },
+
 ];
 ---
 
-<section class="py-[4rem] bg-white border-b border-[#E5E5E5] overflow-hidden">
+<section class="py-[2rem] md:py-[4rem] bg-white overflow-hidden">
   <div class="max-w-[80rem] mx-auto px-[1.5rem]">
     
     <p class="text-center text-[0.9375rem] text-[#737373] mb-[3rem]">
@@ -23,7 +25,7 @@ const clients = [
           <img 
             src={client.logo} 
             alt={client.name}
-            class="h-[2.5rem] md:h-[3rem] object-contain brightness-0 opacity-50 hover:opacity-80 transition-opacity duration-200"
+            class={`h-[3rem] md:h-[4.5rem] w-auto object-contain grayscale opacity-80 hover:opacity-100 hover:grayscale-0 transition-all duration-300 mix-blend-multiply ${client.invert ? 'invert' : ''}`}
           />
         ))}
         <!-- Logos Duplicados para Loop Sem Costura -->
@@ -31,21 +33,21 @@ const clients = [
           <img 
             src={client.logo} 
             alt={client.name}
-            class="h-[2.5rem] md:h-[3rem] object-contain brightness-0 opacity-50 hover:opacity-80 transition-opacity duration-200"
+            class={`h-[3rem] md:h-[4.5rem] w-auto object-contain grayscale opacity-80 hover:opacity-100 hover:grayscale-0 transition-all duration-300 mix-blend-multiply ${client.invert ? 'invert' : ''}`}
           />
         ))}
         {clients.map((client) => (
           <img 
             src={client.logo} 
             alt={client.name}
-            class="h-[2.5rem] md:h-[3rem] object-contain brightness-0 opacity-50 hover:opacity-80 transition-opacity duration-200"
+            class={`h-[3rem] md:h-[4.5rem] w-auto object-contain grayscale opacity-80 hover:opacity-100 hover:grayscale-0 transition-all duration-300 mix-blend-multiply ${client.invert ? 'invert' : ''}`}
           />
         ))}
         {clients.map((client) => (
           <img 
             src={client.logo} 
             alt={client.name}
-            class="h-[2.5rem] md:h-[3rem] object-contain brightness-0 opacity-50 hover:opacity-80 transition-opacity duration-200"
+            class={`h-[3rem] md:h-[4.5rem] w-auto object-contain grayscale opacity-80 hover:opacity-100 hover:grayscale-0 transition-all duration-300 mix-blend-multiply ${client.invert ? 'invert' : ''}`}
           />
         ))}
       </div>
