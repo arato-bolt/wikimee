@@ -1,0 +1,30 @@
+{
+  "id": "clients-logos",
+  "title": "QUEM É LÍDER USA",
+  "logos": [
+    {
+      "id": "client-1",
+      "name": "OV+",
+      "logo": "/logos/ov-plus.svg",
+      "order": 1
+    },
+    {
+      "id": "client-2",
+      "name": "Bolt",
+      "logo": "/logos/bolt.svg",
+      "order": 2
+    },
+    {
+      "id": "client-3",
+      "name": "Jotacom",
+      "logo": "/logos/jotacom.svg",
+      "order": 3
+    },
+    {
+      "id": "client-4",
+      "name": "Suno",
+      "logo": "/logos/suno.svg",
+      "order": 4
+    }
+  ]
+}
