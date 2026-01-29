@@ -1,0 +1,23 @@
+{
+  "id": "pro",
+  "name": "Pro",
+  "price": "R$ 55",
+  "period": "/usuário",
+  "description": "Ideal para trabalho em equipe, departamentos ou pequenos negócios.",
+  "includes": "Inclui Pessoal, mais:",
+  "features": [
+    "5 Assentos Incluídos",
+    "10 GB Incluídos",
+    "Assento Convidado Gratuito",
+    "Workspaces Profissionais",
+    "Projetos e Campanhas",
+    "Equipes",
+    "Gestão de Arquivos",
+    "Aprovações de Arquivos e Textos",
+    "Comunicador Integrado",
+    "Calendários e Comunicador",
+    "Suporte - Tickets"
+  ],
+  "cta": "Agendar Demo",
+  "highlight": false
+}
