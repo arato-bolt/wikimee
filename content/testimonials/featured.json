@@ -1,0 +1,40 @@
+{
+  "id": "testimonials",
+  "eyebrow": "RESULTADOS QUE APARECEM",
+  "headline": "Agências que cresceram com Wikimee",
+  "testimonials": [
+    {
+      "id": "bruno-brito",
+      "name": "Bruno Brito",
+      "role": "Fundador",
+      "company": "Agência",
+      "photo": "/testimonials/bruno-brito.jpg",
+      "metric": "-40%",
+      "metricLabel": "TEMPO DE ENTREGA",
+      "quote": "Wikimee reduziu nosso tempo de ida ao mercado. Eliminamos retrabalho e encurtamos ciclos de aprovação.",
+      "order": 1
+    },
+    {
+      "id": "junior-ressutti",
+      "name": "Junior Ressutti",
+      "role": "CEO",
+      "company": "Agência",
+      "photo": "/testimonials/junior-ressutti.jpg",
+      "metric": "2×",
+      "metricLabel": "MAIS ENTREGAS POR MÊS",
+      "quote": "Automatizamos o fluxo de criação de peças. A equipe ganhou agilidade e o suporte é fantástico.",
+      "order": 2
+    },
+    {
+      "id": "danilo-arato",
+      "name": "Danilo Arato",
+      "role": "Fundador",
+      "company": "Wikimee",
+      "photo": "/testimonials/danilo-arato.jpg",
+      "metric": "5→1",
+      "metricLabel": "FERRAMENTAS",
+      "quote": "Centralizo demandas, entregas e desdobramentos criativos. Tudo em um lugar só.",
+      "order": 3
+    }
+  ]
+}
