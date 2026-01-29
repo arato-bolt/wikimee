@@ -1,0 +1,23 @@
+{
+  "id": "enterprise",
+  "name": "Enterprise",
+  "price": "Consulte",
+  "description": "Ambiente customizável e adaptável a organizações maiores.",
+  "includes": "Inclui Business, mais:",
+  "features": [
+    "Assentos sob consulta",
+    "Armazenamento sob consulta",
+    "Assento Convidado Gratuito",
+    "Permissionamento Organizacional",
+    "Subcontas",
+    "Single Sign-On / SAML",
+    "Métricas e Painel B.I",
+    "Integrações Personalizadas",
+    "Programa de Onboarding",
+    "Programa de Treinamento",
+    "Gerente de Contas",
+    "Suporte Personalizado"
+  ],
+  "cta": "Agendar Demo",
+  "highlight": false
+}
