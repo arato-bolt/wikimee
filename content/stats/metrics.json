@@ -1,0 +1,25 @@
+{
+  "id": "agency-stats",
+  "headline": "Agências criativas perdem muito tempo alternando entre apps, buscando arquivos e informações.",
+  "subheadline": "Kanbans, comunicadores, e-mails, drives, planilhas e outros. Cada app cria um ponto de falha.",
+  "stats": [
+    {
+      "id": "dias-perdidos",
+      "value": "4+",
+      "label": "Dias desperdiçados por pessoa a cada mês na burocracia digital",
+      "order": 1
+    },
+    {
+      "id": "reprovacoes",
+      "value": "33%",
+      "label": "Reprovações extras por divergências nas entregas",
+      "order": 2
+    },
+    {
+      "id": "retrabalho",
+      "value": "50%",
+      "label": "Retrabalho não remunerado",
+      "order": 3
+    }
+  ]
+}
