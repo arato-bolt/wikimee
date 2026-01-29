@@ -1,0 +1,23 @@
+{
+  "id": "comparative",
+  "headline": "O que muda quando você adota Creative Ops",
+  "subheadline": "Transforme caos em processos estruturados.",
+  "traditional": {
+    "title": "Modo Tradicional",
+    "items": [
+      "Briefings soltos em e-mails.",
+      "Arquivos perdidos na nuvem.",
+      "Cliente cobrando status a cada hora.",
+      "Refações infinitas por falhas na comunicação."
+    ]
+  },
+  "wikimee": {
+    "title": "Modo Wikimee",
+    "items": [
+      "Briefings padronizados via formulário.",
+      "Arquivos centralizados e versionados automaticamente.",
+      "Aprovações formais e documentadas.",
+      "Cliente acompanha o status em tempo real (self-service)."
+    ]
+  }
+}
