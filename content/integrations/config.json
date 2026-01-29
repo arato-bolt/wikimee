@@ -1,0 +1,27 @@
+{
+  "id": "integrations",
+  "eyebrow": "Integrações Wikimee",
+  "headline": "Crie seu ecossistema",
+  "subheadline": "Dinamize seu fluxo operacional. Wikimee se adapta ao ecossistema que sua agência e clientes utilizam.",
+  "cta": "Agendar Demo",
+  "integrations": [
+    {
+      "id": "slack",
+      "name": "Slack",
+      "logo": "/integrations/slack.svg",
+      "enabled": true
+    },
+    {
+      "id": "google-drive",
+      "name": "Google Drive",
+      "logo": "/integrations/google-drive.svg",
+      "enabled": true
+    },
+    {
+      "id": "dropbox",
+      "name": "Dropbox",
+      "logo": "/integrations/dropbox.svg",
+      "enabled": true
+    }
+  ]
+}
