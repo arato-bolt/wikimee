@@ -1,0 +1,47 @@
+{
+  "id": "features-carousel",
+  "slides": [
+    {
+      "id": "workspaces-slide",
+      "title": "Workspaces",
+      "description": "Ambientes completos por cliente ou projeto. Campanhas, conteúdos, demandas e equipes organizados visualmente.",
+      "image": "/screenshots/workspaces.png",
+      "order": 1
+    },
+    {
+      "id": "quadros-ageis-slide",
+      "title": "Quadros Ágeis",
+      "description": "Gerencie demandas com quadros Kanban personalizados. Organize por status, prioridade e responsável. Visualize todo o fluxo de trabalho da sua agência.",
+      "image": "/screenshots/kanban.png",
+      "order": 2
+    },
+    {
+      "id": "painel-controle-slide",
+      "title": "Painel de Controle",
+      "description": "Dashboard completo com métricas em tempo real. Acompanhe iniciativas, conteúdos, aprovações e demandas em um só lugar.",
+      "image": "/screenshots/dashboard.png",
+      "order": 3
+    },
+    {
+      "id": "comunicador-slide",
+      "title": "Comunicador",
+      "description": "Centralize toda comunicação da agência. Mensagens, aprovações e feedback integrados diretamente nos projetos.",
+      "image": "/screenshots/comunicador.png",
+      "order": 4
+    },
+    {
+      "id": "versionamento-slide",
+      "title": "Versionamento",
+      "description": "Controle total de versões e aprovações. Compare arquivos lado a lado e gerencie feedback em tempo real.",
+      "image": "/screenshots/versioning.png",
+      "order": 5
+    },
+    {
+      "id": "portal-cliente-slide",
+      "title": "Portal do Cliente",
+      "description": "Crie portais personalizados para cada cliente. Workspaces, kanbans e pastas organizados com a identidade da sua agência.",
+      "image": "/screenshots/portal.png",
+      "order": 6
+    }
+  ]
+}
