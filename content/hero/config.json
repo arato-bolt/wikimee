@@ -1,0 +1,18 @@
+{
+  "id": "hero",
+  "badge": "Usado por mais de 5 mil profissionais",
+  "headline": "Chega de 5 ferramentas na sua operação criativa",
+  "highlightText": "sua operação criativa",
+  "subheadline": "Portal do cliente, projetos, aprovações, comunicador e drive. Tudo em uma única solução feita para agências criativas.",
+  "pills": [
+    "Portal do Cliente",
+    "Campanhas",
+    "Projetos",
+    "Comunicador",
+    "Kanban",
+    "Aprovações",
+    "White-label"
+  ],
+  "ctaPrimary": "Agendar Demo",
+  "videoUrl": "https://player.vimeo.com/video/919270719?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1&playsinline=1&controls=0"
+}
