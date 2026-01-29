@@ -1,0 +1,25 @@
+{
+  "id": "business",
+  "name": "Business",
+  "price": "R$ 80",
+  "period": "/usuário",
+  "badge": "Mais popular",
+  "description": "Perfeito para negócios estabelecidos que querem escalar.",
+  "includes": "Inclui Pro, mais:",
+  "features": [
+    "10 Assentos Incluídos",
+    "50 GB Incluídos",
+    "Assento Convidado Gratuito",
+    "Portais de Relacionamento",
+    "Organização Hierárquica",
+    "White Label",
+    "Copilot",
+    "Gestão de Pessoas",
+    "Time-Tracking",
+    "Integrações Nativas",
+    "Gerente de Sucesso",
+    "Suporte Prioritário"
+  ],
+  "cta": "Agendar Demo",
+  "highlight": true
+}
