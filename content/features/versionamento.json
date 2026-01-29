@@ -1,0 +1,7 @@
+{
+  "id": "versionamento",
+  "title": "Versionamento",
+  "description": "Controle de versão automático. Nunca mais perca o \"Final_V2_AgoraVai.psd\".",
+  "iconPath": "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z",
+  "order": 5
+}
