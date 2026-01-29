@@ -1,12 +1,7 @@
 ---
-// FAQ FINAL - fade-in, cor roxo consistente
-const faqs = [
-  { q: 'Para quem é indicado?', a: 'Agências de design, web, vídeo e qualquer agência criativa que precisa gerenciar projetos e clientes.' },
-  { q: 'Posso testar antes de contratar?', a: 'Sim! Oferecemos 7 dias de garantia para você testar com tranquilidade. Se não se adaptar, devolvemos seu dinheiro.' },
-  { q: 'Como funciona o white-label?', a: 'Você usa seu logo, suas cores e seu domínio. Seus clientes acessam como se fosse seu sistema.' },
-  { q: 'Posso cancelar a qualquer momento?', a: 'Sim. Sem fidelidade, sem multa. Cancele quando quiser.' },
-  { q: 'Quanto tempo leva para implementar?', a: 'Em média 1 semana. Oferecemos onboarding para ajudar na migração.' }
-];
+import { getFAQ } from '../lib/content.js';
+
+const faqs = getFAQ();
 ---
 
 <section class="py-[6rem] bg-[#FAFAFA] fade-section">
@@ -21,15 +16,15 @@ const faqs = [
     
     <div class="space-y-[0.75rem]">
       {faqs.map((faq) => (
-        <details class="group bg-white rounded-[0.5rem] border border-[#E5E5E5] hover:border-[#6D28D9]/30 transition-colors duration-200">
-          <summary class="flex justify-between items-center p-[1.25rem] cursor-pointer list-none">
-            <span class="text-[1rem] font-medium text-[#0A0A0A]">{faq.q}</span>
+        <details class="group bg-white rounded-[0.5rem] border border-[#E5E5E5] hover:border-[#6D28D9]/30 transition-all">
+          <summary class="flex justify-between items-center cursor-pointer px-[1.25rem] py-[1.25rem] list-none">
+            <span class="text-[1rem] font-medium text-[#0A0A0A]">{faq.question}</span>
             <svg class="w-[1.25rem] h-[1.25rem] text-[#737373] group-open:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
             </svg>
           </summary>
           <div class="px-[1.25rem] pb-[1.25rem]">
-            <p class="text-[0.875rem] text-[#737373] leading-relaxed">{faq.a}</p>
+            <p class="text-[0.875rem] text-[#737373] leading-relaxed">{faq.answer}</p>
           </div>
         </details>
       ))}
