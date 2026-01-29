@@ -1,0 +1,30 @@
+{
+  "id": "segments",
+  "headline": "Para agências criativas de qualquer segmento",
+  "segments": [
+    {
+      "id": "agencias-web",
+      "title": "Agências Web",
+      "description": "Entregas criativas, aprovações e versões.",
+      "order": 1
+    },
+    {
+      "id": "agencias-ecommerce",
+      "title": "Agências e-Commerce",
+      "description": "Sprints, entregas e comunicação com clientes.",
+      "order": 2
+    },
+    {
+      "id": "marketing-digital",
+      "title": "Marketing Digital",
+      "description": "Gestão e aprovação de campanhas, peças e conteúdo.",
+      "order": 3
+    },
+    {
+      "id": "agencias-360",
+      "title": "Agências 360°",
+      "description": "Projetos complexos com múltiplas revisões.",
+      "order": 4
+    }
+  ]
+}
