@@ -1,0 +1,35 @@
+{
+  "id": "creative-flow",
+  "eyebrow": "PROCESSO",
+  "headline": "Fluxo criativo fluido e contínuo",
+  "steps": [
+    {
+      "id": "briefing",
+      "number": 1,
+      "title": "Briefing",
+      "description": "Receba demandas estruturadas diretamente do cliente pelo portal.",
+      "order": 1
+    },
+    {
+      "id": "gestao",
+      "number": 2,
+      "title": "Gestão",
+      "description": "Distribua tarefas através de quadros, siga os prazos e gerencie pessoas.",
+      "order": 2
+    },
+    {
+      "id": "criacao-review",
+      "number": 3,
+      "title": "Criação & Review",
+      "description": "Centralize arquivos, versões e feedbacks internos antes de liberar.",
+      "order": 3
+    },
+    {
+      "id": "aprovacao",
+      "number": 4,
+      "title": "Aprovação",
+      "description": "O cliente visualiza, comenta e aprova com um clique.",
+      "order": 4
+    }
+  ]
+}
