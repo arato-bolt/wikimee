@@ -1,0 +1,19 @@
+{
+  "id": "footer",
+  "tagline": "Plataforma Operacional. Centralize, Automatize e Escale.",
+  "social": [
+    {
+      "platform": "LinkedIn",
+      "url": "https://www.linkedin.com/company/wikimee?utm_source=website&utm_medium=organic&utm_campaign=website&utm_term=website&utm_content=website"
+    },
+    {
+      "platform": "Instagram",
+      "url": "https://www.instagram.com/_wikimee/?utm_source=website&utm_medium=organic&utm_campaign=website&utm_term=website&utm_content=website"
+    },
+    {
+      "platform": "Facebook",
+      "url": "https://www.facebook.com/wikimee?utm_source=website&utm_medium=organic&utm_campaign=website&utm_term=website&utm_content=website"
+    }
+  ],
+  "links": {
+    "produto": 
