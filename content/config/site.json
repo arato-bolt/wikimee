@@ -1,1 +1,13 @@
-
+{
+  "siteName": "Wikimee",
+  "siteUrl": "https://lp.wikimee.app",
+  "seo": {
+    "title": "Wikimee - Gestão completa para agências criativas",
+    "description": "Portal do cliente, projetos, aprovações, comunicador e drive em uma única plataforma",
+    "ogImage": "/og-image.png"
+  },
+  "cta": {
+    "demoUrl": "https://meetings.hubspot.com/novos-negocios/demonstracao?uuid=a302e469-9c12-40f5-86c6-15a91cac9ab5",
+    "signupUrl": "https://wikimee.app/signup"
+  }
+}
