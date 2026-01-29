@@ -1,0 +1,28 @@
+{
+  "id": "pain-points",
+  "headline": "Se isso é familiar, você não está sozinho",
+  "subheadline": "Os maiores gargalos em agências criativas nunca foram sobre falta de talento, mas sim sobre falhas nos processos.",
+  "problems": [
+    {
+      "id": "alteracoes-interminaveis",
+      "icon": "clock",
+      "title": "Alterações intermináveis",
+      "description": "Clientes pedem mudanças pelo WhatsApp, e-mails e áudio. Controle desaparece e os resultados se perdem.",
+      "order": 1
+    },
+    {
+      "id": "prazos-estourados",
+      "icon": "clock-alert",
+      "title": "Prazos estourados",
+      "description": "Sem um cronograma visível, entregas atrasam e as equipes viram reféns da urgência.",
+      "order": 2
+    },
+    {
+      "id": "briefings-confusos",
+      "icon": "lock",
+      "title": "Briefings confusos",
+      "description": "As pessoas perdem horas tentando decifrar o que o cliente quer por falta de informações claras.",
+      "order": 3
+    }
+  ]
+}
