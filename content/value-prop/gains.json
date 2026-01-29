@@ -1,0 +1,25 @@
+{
+  "id": "value-proposition",
+  "headline": "Wikimee é menos retrabalho e mais previsibilidade",
+  "subheadline": "Centralize suas operações e elimine o caos. Com Wikimee, você tem visibilidade total do pipeline, reduz falhas de comunicação e entrega no prazo, sempre.",
+  "gains": [
+    {
+      "id": "aprovacoes-velozes",
+      "title": "Aprovações muito mais velozes",
+      "icon": "check-circle",
+      "order": 1
+    },
+    {
+      "id": "historico-automatico",
+      "title": "Histórico e timelines automáticos",
+      "icon": "clock",
+      "order": 2
+    },
+    {
+      "id": "clientes-satisfeitos",
+      "title": "Clientes satisfeitos",
+      "icon": "smile",
+      "order": 3
+    }
+  ]
+}
